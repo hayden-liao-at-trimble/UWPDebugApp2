@@ -1,0 +1,46 @@
+﻿<!--
+//*********************************************************
+//
+// Copyright (c) Microsoft. All rights reserved.
+// This code is licensed under the MIT License (MIT).
+// THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
+// ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY
+// IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR
+// PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
+//
+//*********************************************************
+-->
+
+<Page
+    x:Class="UWPDebugApp2.SingleFilePicker"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPDebugApp2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:ConnectionId='2' x:Name="LayoutRoot" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,10,12,12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:ConnectionId='3' x:Name="Input" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" TextWrapping="Wrap" HorizontalAlignment="Left">
+                <!--Style="{StaticResource BasicTextStyle}"-->
+        Prompt the user to pick a single file.
+            </TextBlock>
+            <Button x:ConnectionId='6' Grid.Row="1" x:Name="PickAFileButton" Content="Pick file"                               Margin="0,10,10,0"/>
+        </Grid>
+        <Grid x:ConnectionId='4' x:Name="Output" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock x:ConnectionId='5' x:Name="OutputTextBlock" TextWrapping="Wrap"/>
+            <!--Style="{StaticResource BasicTextStyle}"-->
+        </Grid>
+    </Grid>
+</Page>
+
